@@ -74,7 +74,8 @@ public class ControllerProcessos {
 			try{
 				Runtime.getRuntime().exec(buffer.toString());
 			} catch(IOException e){
-				System.err.println("PID ou Nome inexistente");
+				String msgErro = e.getMessage();
+				System.err.println(msgErro);
 			}
 		}else if(so.contains("Linux")){
 			String cmdPid = "kill -9";
@@ -95,7 +96,8 @@ public class ControllerProcessos {
 			try{
 				Runtime.getRuntime().exec(buffer.toString());
 			} catch(IOException e){
-				System.err.println("PID ou Nome inexistente");
+				String msgErro = e.getMessage();
+				System.err.println(msgErro);
 			}
 		}
 	}
